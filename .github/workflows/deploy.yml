@@ -30,9 +30,6 @@ jobs:
       - name: Build with Maven
         run: mvn clean package --file lambdafilehandler/pom.xml
 
-      - name: Debug: List Target Directory
-        run: ls -R lambdafilehandler/target
-
       - name: Set up AWS CLI
         uses: aws-actions/configure-aws-credentials@v1
         with:
